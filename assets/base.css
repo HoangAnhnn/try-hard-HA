@@ -12,12 +12,39 @@
 
 * {
     box-sizing: inherit;
+    
 }
 html {
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
     font-family: 'Nunito', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+
+/* Hover */
+.nav-sub-child__link:hover,
+.nav-sub__list:hover .nav-sub__link,
+.nav-sub__list:hover,
+.nav__list:hover,
+.header__connect-sign:hover,
+.header__connect-link:hover {
+    color:var(--blue-color);
+    cursor: pointer;
+    transition: all 0.3s;
+
+
 }
 
 /* bc color */
@@ -28,7 +55,7 @@ html {
 .bc-blue {
     background-color: var(--blue-color);
 }
-.bc-bule-dam {
+.bc-blue-dam {
     background-color: var(--bule-dam-color);
 }
 .bc-red-pink {
@@ -51,6 +78,39 @@ html {
     background-color: var(--gray-color);
 }
 
+
+.color-purple {
+    color: var(--purple-color);
+}
+.color-blue {
+    color: var(--blue-color);
+}
+.color-bule-dam {
+    color: var(--bule-dam-color);
+}
+.color-red-pink {
+    color: var(--red-pink-color);
+}
+
+.color-pink {
+    color: var(--pink-color);
+}
+.color-orange {
+    color: var(--orange-color);
+}
+.color-text {
+    color: var(--text-color);
+}
+.color-black {
+    color: var(--black-color);
+}
+.color-gray {
+    color: var(--gray-color);
+}
+
+.color-while {
+    color: #fff;
+}
 
 
 /* box-chung */
@@ -155,9 +215,6 @@ html {
 }
 
 .corner::before {
-
-    
-
     content:"";
     display:block;
     position: absolute;
@@ -173,3 +230,18 @@ html {
 }
 
 
+
+
+.nav-have-sup {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: unset !important;
+}
+
+.nav-sup-text {
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 5px 8px 3px 8px;
+    border-radius: 6px;
+    margin-left: 6px;
+}
