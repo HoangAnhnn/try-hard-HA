@@ -1,4 +1,7 @@
 :root {
+    --width-pc: 1146px;
+    --width-pc-thap: 942px;
+
     --purple-color: #994db1;
     --blue-color: #2590ed;
     --bule-dam-color:#1234c4;
@@ -8,6 +11,8 @@
     --black-color:  #0f0e0e;
     --text-color: #5f5f5f;
     --gray-color:#a2a2a2;
+
+    --box-shadow: 0 0 1px rgba(0,0,0,0.05) , 0 0 3px rgba(0,0,0,0.05), 0 2px 8px rgba(0,0,0,0.05);
 }
 
 * {
@@ -34,6 +39,9 @@ ul {
 
 
 /* Hover */
+
+
+
 .nav-sub-child__link:hover,
 .nav-sub__list:hover .nav-sub__link,
 .nav-sub__list:hover,
@@ -43,73 +51,88 @@ ul {
     color:var(--blue-color);
     cursor: pointer;
     transition: all 0.3s;
+}
 
 
+
+/* show-element */
+
+.nav__list:hover .nav__child,
+.nav-sub__list:hover .nav-sub-child,
+.nav__list:hover .nav-sub {
+    visibility: visible;
+    overflow:visible;
+    opacity: 1;
 }
 
 /* bc color */
 
 .bc-purple {
-    background-color: var(--purple-color);
+    background-color: var(--purple-color) !important;
 }
 .bc-blue {
-    background-color: var(--blue-color);
+    background-color: var(--blue-color) !important;
 }
 .bc-blue-dam {
-    background-color: var(--bule-dam-color);
+    background-color: var(--bule-dam-color) !important;
 }
 .bc-red-pink {
-    background-color: var(--red-pink-color);
+    background-color: var(--red-pink-color) !important;
 }
 
 .bc-pink {
-    background-color: var(--pink-color);
+    background-color: var(--pink-color) !important;
 }
 .bc-orange {
-    background-color: var(--orange-color);
+    background-color: var(--orange-color) !important;
 }
 .bc-text {
-    background-color: var(--text-color);
+    background-color: var(--text-color) !important;
 }
 .bc-black {
-    background-color: var(--black-color);
+    background-color: var(--black-color) !important;
 }
 .bc-gray {
-    background-color: var(--gray-color);
+    background-color: var(--gray-color) !important;
 }
+
+.bc-blue-circle {
+    background-color: #4545e8 !important;
+}
+
 
 
 .color-purple {
-    color: var(--purple-color);
+    color: var(--purple-color) !important;
 }
 .color-blue {
-    color: var(--blue-color);
+    color: var(--blue-color) !important;
 }
 .color-bule-dam {
-    color: var(--bule-dam-color);
+    color: var(--bule-dam-color) !important;
 }
 .color-red-pink {
-    color: var(--red-pink-color);
+    color: var(--red-pink-color) !important;
 }
 
 .color-pink {
-    color: var(--pink-color);
+    color: var(--pink-color) !important;
 }
 .color-orange {
-    color: var(--orange-color);
+    color: var(--orange-color) !important;
 }
 .color-text {
-    color: var(--text-color);
+    color: var(--text-color) !important;
 }
 .color-black {
-    color: var(--black-color);
+    color: var(--black-color) !important;
 }
 .color-gray {
-    color: var(--gray-color);
+    color: var(--gray-color) !important;
 }
 
 .color-while {
-    color: #fff;
+    color: #fff !important;
 }
 
 
@@ -120,10 +143,9 @@ ul {
     padding:5px 17px 5px 9px ;
     border: 1px solid #e0dede;
     border-radius: 150px;
-    margin-left: 200px;
     text-decoration: none;
     margin-right: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .box__popular-circle {
@@ -139,6 +161,13 @@ ul {
     color: #0f0e0e;
     font-weight: 600;
 }
+
+.box__popular:hover .box__popular-text {
+    color:#2568ef;
+    transition: all 0.3s;
+}
+
+
 
 
 /* 
@@ -183,26 +212,50 @@ ul {
     right: var(--space);
     width: var(--kichthuoc);
     height: var(--kichthuoc);
-    z-index: 1;
+    z-index: 10;
     border-radius: 50%;
-    background-color: var(--bule-dam-color);
     background-color: #fff;
     border: 2px solid #fff;
     text-decoration: none;
 }
 
+.circle-icon {
+    font-size: 1.6rem;
+    color: #0f0e0e;
+}
+
+.circle-text {
+    color: #fff;
+}
+
+.circle-icon-play {
+    position: relative;
+    left: -1px;
+}
+
 /* 
- <a href="" class="circle">
-            
- </a>
+<div class="circle">
+     <i class=" circle-icon fas fa-play"></i>
+</div>
 */
 
+
+/* 
+<div class="circle">
+    <i class=" circle-icon circle-icon-play fas fa-play"></i>
+</div> */
+
+/* 
+<div class="circle bc-blue-dam">
+    <span class="circle-text">8.2</span>
+</div> 
+
+*/
+
+
+
 /* corner */
-.box {
-    height: 200px;
-    width: 400px;
-    background-color: var(--pink-color);
-}
+
 
 .corner {
     position: relative;
@@ -212,6 +265,8 @@ ul {
     visibility: visible;
     overflow: visible;
     transform: scale(1);
+    filter: brightness(100%) !important;
+
 }
 
 .corner::before {
@@ -220,17 +275,21 @@ ul {
     position: absolute;
     bottom: 0;
     right: 0;
-    border-top: 50px solid #000;
-    border-right: 50px solid #fff;
+    border-top: 50px solid var(--pink-color) !important;
+    border-right: 50px solid #fff  !important;
     transform-origin: bottom right;
     visibility: hidden;
     overflow: hidden;
     transform: scale(0);
-    transition: 0.5s;
+    transition: 0.3s;
+    filter: brightness(100%) !important;
+    z-index: 10;
 }
 
 
 
+
+/* nav__sup-text */
 
 .nav-have-sup {
     display: inline-flex !important;
@@ -245,3 +304,40 @@ ul {
     border-radius: 6px;
     margin-left: 6px;
 }
+
+
+/* box - cuối */
+
+.box__time {
+    display:flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #9f9f9f;
+}
+
+.box__time-date {
+
+}
+
+.box__time-circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color:#fff;
+    border: 1px  solid #e0dede;
+    margin: 10px 8px;
+}
+
+.box__time-red {
+
+}
+
+
+
+/* <div class="box__time">
+<span class="box__time-date">December 10 , 2019</span>
+
+<div class="box__time-circle"></div>
+
+<span class="box__time-red">5 Mín read</span>
+</div> */

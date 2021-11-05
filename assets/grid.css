@@ -5,11 +5,7 @@
 }
 
 .grid.wide {
-    max-width: 1142px;
-    margin: 0 auto;
-}
-.grid.wide-big {
-    max-width: 1740px;
+    max-width: 1146px;
     margin: 0 auto;
 }
 
@@ -282,8 +278,8 @@
 /* PC medium resolution > */
 @media (min-width: 1113px) {
     .row {
-        margin-left: -12px;
-        margin-right: -12px;
+        margin-left: -15px;
+        margin-right: -15px;
     }
 
     .row.sm-gutter {
@@ -292,8 +288,8 @@
     }
 
     .col {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .row.sm-gutter .col {
@@ -434,19 +430,19 @@
 /* Tablet - PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
     .wide {
-        width: 6415px;
+        width: 644px;
     }
 }
 
 /* > PC low resolution */
-@media (min-width: 10215px) and (max-width: 1239px) {
+@media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
-        width: 9815px;
+        width: 942px;
     }
 
     .wide .row {
-        margin-left: -12px;
-        margin-right: -12px;
+        margin-left: -15px;
+        margin-right: -15px;
     }
 
     .wide .row.sm-gutter {
@@ -455,8 +451,8 @@
     }
 
     .wide .col {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .wide .row.sm-gutter .col {
