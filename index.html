@@ -850,19 +850,18 @@
       </div>
       <div class="modal__inner">
            <div class="modal__heading">
-             <div class="modal__heading-list">
-               <ion-icon class="modal__heading-icon" name="log-out-outline"></ion-icon>
-               <i class="modal__heading-icon fas fa-sign-out-alt"></i>
-               <span class="modal__heading-text" >Sign in</span>
 
-             </div>
-             <div class="modal__heading-list">
-              <i class="modal__heading-icon fas fa-user-plus"></i>
-  
-              <span class="modal__heading-text" >New account</span>
+              <div class="modal__heading-list modal__heading-choice modal__heading-boder-left">
+                <i class="modal__heading-icon fas fa-sign-out-alt"></i>
+                <span class="modal__heading-text" >Sign in</span>
+              </div>
+
+              <div class="modal__heading-list modal__heading-no-choice modal__heading-boder-right">
+                <i class="modal__heading-icon fas fa-user-plus"></i>
+                <span class="modal__heading-text" >New account</span>
+              </div>
 
             </div>
-           </div>
 
            <div class="modal__sign">
              <form action="">
@@ -872,12 +871,12 @@
                </div>
 
                <div class="modal__input">
-                <ion-icon class="input__sign-icon" name="mail-outline"></ion-icon>
+                <ion-icon  class="input__sign-icon" name="lock-open"></ion-icon>
                 <input type="password" name="" required placeholder="Password" class="input__sign">
 
                 <span class="input__sign-line"></span>
 
-                <i class="input__sign-icon fas fa-eye"></i>
+                <i class="input__sign-icon input__sign-icon-eye fas fa-eye"></i>
                </div>
                <div class="input__show-pass">
                  <input type="checkbox" name="" id="">
@@ -885,28 +884,32 @@
 
                </div>
 
-               <input type="submit" value="Log in">
+               <input class="modal__input-btn" type="submit" value="Log in">
 
              </form>
+
+             <span class="modal__or">- OR -</span>
+             
+              <div class="modal__container-connect">
+    
+                    <a href="" class="modal__connect">
+                        <i class="modal__connect-icon fab fa-facebook-square"></i>
+                        <span class="modal__connect-name">Continue with 
+                          <span class="modal__connet-text"> Facebook</span>
+                        </span>
+                    </a>
+                    <a href="" class="modal__connect">
+                        <i class=" modal__connect-icon fab fa-google"></i>
+                          <span class="modal__connect-name">Continue with <span class="modal__connet-text">Google</span></span>
+                    </a>
+                    <a href="" class="modal__connect">
+                        <i class=" modal__connect-icon fab fa-twitter"></i>
+                          <span class="modal__connect-name">Continue with <span class="modal__connet-text">Twitter</span></span>
+                    </a>
+                </div>
+
            </div>
 
-           <span class="modal__or">- OR -</span>
-           
-<div class="modal__container-connect">
-  
-  <a href="" class="modal__connect">
-   <i class="modal__connect-icon fab fa-facebook-square"></i>
-    <span class="modal__connect-name">Continue with <span class="modal__connet-text">Facebook</span></span>
-  </a>
-  <a href="" class="modal__connect">
-   <i class=" modal__connect-icon fab fa-google"></i>
-    <span class="modal__connect-name">Continue with <span class="modal__connet-text">Facebook</span></span>
-  </a>
-  <a href="" class="modal__connect">
-   <i class=" modal__connect-icon fab fa-twitter"></i>
-    <span class="modal__connect-name">Continue with <span class="modal__connet-text">Facebook</span></span>
-  </a>
-</div>
 
 
 
