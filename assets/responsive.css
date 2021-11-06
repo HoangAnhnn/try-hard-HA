@@ -1,5 +1,14 @@
 @media (min-width: 1024px) and (max-width: 1239px) {
 
+    /* chung-cho */
+
+    .box__margin-samll {
+        margin-bottom: 4px;
+    }
+
+
+
+    
     .nav__list {
         padding: 24px 10px;
     }
@@ -13,9 +22,7 @@
           
     }
 
-    .box__margin-samll {
-        margin-bottom: 4px;
-    }
+    
     .above::before {
         display: none;
     }

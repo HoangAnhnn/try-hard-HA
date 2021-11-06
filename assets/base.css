@@ -4,7 +4,7 @@
 
     --purple-color: #994db1;
     --blue-color: #2590ed;
-    --bule-dam-color:#1234c4;
+    --bule-dam-color:#2568ef;
     --red-pink-color: #c74970;
     --orange-color: #ed7e4f;
     --pink-color: #ff3366;
@@ -37,6 +37,10 @@ ul {
 }
 
 
+img {
+    display: block;
+}
+
 
 /* Hover */
 
@@ -53,6 +57,15 @@ ul {
     transition: all 0.3s;
 }
 
+
+/* Hover mờ */
+
+.recent__left:hover .recent__left-img,
+.slider__list:hover .slider__item {
+    filter: brightness(50%) ;
+    transition: all 0.3s;
+
+}
 
 
 /* show-element */
@@ -108,6 +121,10 @@ ul {
 .bc-gray {
     background-color: var(--gray-color) !important;
 }
+.bc-while {
+    background-color: #fff !important;
+}
+
 
 .bc-blue-circle {
     background-color: #4545e8 !important;
@@ -185,9 +202,28 @@ ul {
 
 /* 
 <a href="" class="box__popular">
-    <div class="box__popular-circle purple"></div>
+    <div class="box__popular-circle bc-purple"></div>
     <span class="box__popular-text">business</span>
 </a> 
+
+<a href="" class="box__popular">
+    <div class="box__popular-circle bc-blue"></div>
+    <span class="box__popular-text">travel</span>
+</a>
+
+<a href="" class="box__popular">
+    <div class="box__popular-circle bc-blue-dam"></div>
+    <span class="box__popular-text">video</span>
+</a>
+
+<a href="" class="box__popular">
+    <div class="box__popular-circle bc-red-pink"></div>
+    <span class="box__popular-text">lifestyle</span>
+</a>
+<a href="" class="box__popular">
+    <div class="box__popular-circle bc-orange"></div>
+    <span class="box__popular-text">markets</span>
+</a>
 */
 
 
@@ -238,6 +274,7 @@ ul {
 }
 
 .circle-text {
+    font-size: 1.5rem;
     color: #fff;
 }
 
@@ -246,17 +283,26 @@ ul {
     left: -1px;
 }
 
+
+
+
 /* 
+
 <div class="circle">
-     <i class=" circle-icon fas fa-play"></i>
+    <i class=" circle-icon far fa-image"></i>
 </div>
-*/
 
 
-/* 
 <div class="circle">
     <i class=" circle-icon circle-icon-play fas fa-play"></i>
-</div> */
+</div> 
+
+ <div class="circle bc-blue-circle">
+    <span class="circle-text">8.2</span>
+</div>
+
+
+*/
 
 /* 
 <div class="circle bc-blue-dam">
@@ -302,6 +348,9 @@ ul {
 
 
 
+
+
+
 /* nav__sup-text */
 
 .nav-have-sup {
@@ -324,8 +373,10 @@ ul {
 .box__time {
     display:flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #9f9f9f;
+    font-weight: 700;
+    margin: 16px 0 26px 0;
 }
 
 .box__time-date {
@@ -336,21 +387,139 @@ ul {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color:#fff;
     border: 1px  solid #e0dede;
-    margin: 10px 8px;
+    margin: 0px 8px;
 }
 
 .box__time-red {
 
 }
 
+.box__time-heading {
+    font-weight: 700;
+}
 
 
-/* <div class="box__time">
-<span class="box__time-date">December 10 , 2019</span>
+.color-box {
+    color: #a4a4a4 !important;
+}
 
-<div class="box__time-circle"></div>
 
-<span class="box__time-red">5 Mín read</span>
-</div> */
+/*
+
+<div class="box__time">
+    <div class="box__time-heading">By inhype</div>
+
+    <div class="box__time-circle"></div>
+
+    <span class="box__time-date">December 10, 2019</span>
+
+    <div class="box__time-circle"></div>
+
+    <span class="box__time-red">5 Mins read</span>
+</div> 
+
+*/
+
+
+/* Animation Face In  */
+
+@keyframes FaceIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* golbal thẻ chung */
+
+.container__golbal {
+    padding: 65px 0 45px 0;
+    color: #0f0e0e;
+}
+
+.container__global-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+
+
+.container__global-footer {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight:600
+}
+
+/* 
+
+ <div class="container__golbal">
+    <p class="container__global-heading">Travel</p>
+    <p class="container__global-footer">Where are we going</p>
+
+  </div>
+*/
+
+
+
+/* Decription Gobal */
+
+.description__global {
+    margin-top: 30px;   
+}
+
+.description__global-heading {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.description__global-link {
+    display:block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f0e0e;
+}
+
+.description__global-footer {
+    font-size: 1.5rem;
+    color: #5f5f5f;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* 
+<div class="description__global">
+            <div class="description__global-heading">
+              <a href="" class="box__popular box__margin-samll">
+                <div class="box__popular-circle bc-red-pink"></div>
+                <span class="box__popular-text">lifestyle</span>
+            </a>
+            <a href="" class="box__popular">
+              <div class="box__popular-circle bc-orange"></div>
+              <span class="box__popular-text">markets</span>
+            </a>
+            </div>
+
+            <a href="" class="description__global-link">Five Thing You Need to Know to Start Your Day</a>
+
+            <div class="box__time">
+              <div class="box__time-heading">By inhype</div>
+          
+              <div class="box__time-circle"></div>
+          
+              <span class="box__time-date">December 10, 2019</span>
+          
+              <div class="box__time-circle"></div>
+          
+              <span class="box__time-red">5 Mins read</span>
+          </div> 
+
+          <p class="description__global-footer">From there, we generally start working on visual concepts that can make that vision more tangible. Our stakeholders are often editors with…</p>
+          </div>
+
+*/

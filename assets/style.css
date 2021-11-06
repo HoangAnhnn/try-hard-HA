@@ -88,7 +88,10 @@
 /* Header__connect */
 
 
-
+.header {
+    position: relative;
+    z-index: 5;
+}
 
 .header__connect {
     display: flex;
@@ -230,6 +233,7 @@
     top: 100%;
     left: 0;
     min-width: 240px;
+    background-color: #fff;
     font-weight: 600;
     box-shadow: var(--box-shadow);
     border-radius: 6px;
@@ -289,6 +293,7 @@
 
 
 .nav__child {
+    background-color: #fff;
     position: absolute;
     top: 100%;
     width:var(--width-pc);
@@ -353,6 +358,9 @@
 
 /* Modal */
 
+.modal.open {
+    display: flex;
+}
 
 
 .modal {
@@ -361,8 +369,12 @@
      right: 0;
      left: 0;
      bottom: 0;
-     display: flex;
+     display: none;
      z-index: 10;
+
+     animation: FaceIn ease-in 0.3s;
+
+     transform-origin: top;
 }
 
 .modal__overlay {
@@ -381,6 +393,25 @@
      width: 524px;
      display: flex;
      flex-direction: column;
+
+     animation: Show ease-in 0.3s;
+}
+
+
+@keyframes Show {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+     transition: all 0.3s;
+
+
+    }
 }
 
 .modal__body-close {
@@ -654,4 +685,215 @@ padding: 10px 0;
 
 .input__sign-icon-small {
     font-size: 1.8rem;
+}
+
+
+
+
+/* Slider */
+
+
+
+
+.slider {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    height: 600px;
+
+}
+
+.slider__list {
+    height: 600px;
+    position: relative;
+    width: 100%;
+    
+}
+.slider__list:hover .slider__item {
+    filter: brightness(50%) ;
+    transition: all 0.3s;
+
+}
+
+.slider__item-2,
+.slider__item-3,
+.slider__item-1 {
+    height: 600px;
+    background: url(./imgs/slider-1.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%) ;
+}
+
+.slider__item-2 {
+    background:url(./imgs/slider-2.jpg)
+}
+
+.slider__item-3 {
+    background:url(./imgs/slider-3.jpg)
+}
+.slider__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slider__img-sub {
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+    left: 250px;
+
+}
+
+.slider-img-sub-link {
+    font-size: 3.5rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.slider-img-sub-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Slider Sub */
+
+.slider__sub {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display:flex;
+    align-items: center;
+}
+
+.slider__sub-list {
+    background-color: #f5f5f5;
+    min-width: 210px;
+    max-width:330px;
+    padding: 46px 40px 56px 40px;
+    color: var(--black-color);
+    font-size: 1.6rem;
+    font-weight:700
+}
+
+.slider__sub-number {
+    margin-bottom: 22px;
+}
+
+
+.duoi-slider {
+    padding:60px 6px 70px 0;
+}
+
+.duoi-slider-text {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    font-weight: 800;
+    color: var(--black-color);
+    display: block;
+}
+
+.recent__r-link:hover,
+.duoi-slider-text:hover {
+    color: var(--blue-color);
+    transition: all 0.3s;
+}
+
+
+
+/* Recent */
+
+.recent-bao {
+    padding-right: 30px;
+}
+
+.recent__left {
+    width: 100%;
+    position: relative;
+    border-radius: 6px;
+}
+
+.recent__left-img {
+    border-radius: inherit;
+    height: 460px;
+    background: url(./imgs/recent.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%) ;
+}
+
+.recent-link{
+    display:block;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 800;
+
+}
+
+.recent__left-sub {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding:0 65px 50px 50px;
+}
+
+.recent__left-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 10px 0 0 0 ;
+}
+
+.recent__left:hover .recent__left-sub {
+    bottom: 20px;
+    transition: all 0.3s;
+}
+
+/* Recent right */
+
+.recent__r-heading {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 800;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0dede;
+}
+
+.recent__r-link {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    padding: 14px 0 0px 0;
+    color:var(--black-color)
+
+}
+
+/* technology */
+
+.technology {
+    margin-bottom: 45px;
+}
+
+.technology__img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.technology__list:hover .technology__img {
+    filter: brightness(70%);
+    transition: all 0.3s;
+
+}
+
+.technology__more {
+    text-align: center;
+}
+
+.technology-container {
+    padding-bottom: 60px;
 }
