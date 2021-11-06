@@ -67,6 +67,19 @@ ul {
 
 /* bc color */
 
+.bc-face {
+    background-color: #4267b2;
+}
+
+
+.bc-gg {
+    background-color: #dc4e41;
+}
+
+.bc-twitter {
+    background-color: #4ab3f4;
+}
+
 .bc-purple {
     background-color: var(--purple-color) !important;
 }

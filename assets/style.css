@@ -378,7 +378,7 @@
      
      position: relative;
      z-index: 100;
-     min-width: 524px;
+     width: 524px;
      display: flex;
      flex-direction: column;
 }
@@ -405,7 +405,7 @@ align-self: center;
 color: #fff;
 text-decoration: underline;
 font-size: 1.3rem;
-font-weight: 600;
+font-weight: 300;
 padding: 10px 0;
 }
 
@@ -575,7 +575,6 @@ padding: 10px 0;
     display: flex;
     align-items: center;
     border-radius: 6px;
-    background-color: var(--blue-color);
     padding: 6px 0 6px 8px;
     width: 280px;
     margin-bottom: 8px;
@@ -601,4 +600,58 @@ padding: 10px 0;
     font-weight: 500;
     display: inline-block;
     margin-left: 3px;
+}
+
+.input__link-more {
+    text-decoration: underline;
+    color: #2568ef;
+}
+
+
+/* tao moi */
+
+.modal__input-name-container {
+    display:flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    
+
+}
+
+
+.grow-input-sign {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    
+}
+
+.modal-input__name {
+    display:flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #e0dede;
+}
+
+
+
+
+
+
+.col-input-sign {
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+}
+
+
+.modal__show-footer {
+    display: none;
+}
+
+.input__sign-icon-small {
+    font-size: 1.8rem;
 }
