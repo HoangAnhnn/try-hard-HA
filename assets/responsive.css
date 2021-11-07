@@ -31,3 +31,22 @@
     }
 
 }
+
+@media (max-width: 1113px) {
+    .test-2 {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .test-1 {
+        margin-left: 0;
+        width: 100%;
+    }
+    .slider__sub-list {
+        width: 33.33333%;
+        max-width: 100%;
+        
+
+    }
+}

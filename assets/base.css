@@ -94,40 +94,40 @@ img {
 }
 
 .bc-purple {
-    background-color: var(--purple-color) !important;
+    background-color: var(--purple-color) ;
 }
 .bc-blue {
-    background-color: var(--blue-color) !important;
+    background-color: var(--blue-color) ;
 }
 .bc-blue-dam {
-    background-color: var(--bule-dam-color) !important;
+    background-color: var(--bule-dam-color) ;
 }
 .bc-red-pink {
-    background-color: var(--red-pink-color) !important;
+    background-color: var(--red-pink-color) ;
 }
 
 .bc-pink {
-    background-color: var(--pink-color) !important;
+    background-color: var(--pink-color) ;
 }
 .bc-orange {
-    background-color: var(--orange-color) !important;
+    background-color: var(--orange-color) ;
 }
 .bc-text {
-    background-color: var(--text-color) !important;
+    background-color: var(--text-color) ;
 }
 .bc-black {
-    background-color: var(--black-color) !important;
+    background-color: var(--black-color) ;
 }
 .bc-gray {
-    background-color: var(--gray-color) !important;
+    background-color: var(--gray-color) ;
 }
 .bc-while {
-    background-color: #fff !important;
+    background-color: #fff ;
 }
 
 
 .bc-blue-circle {
-    background-color: #4545e8 !important;
+    background-color: #4545e8 ;
 }
 
 
@@ -166,6 +166,16 @@ img {
 }
 
 
+/* font-size */
+
+.fz-2 {
+    font-size: 2rem !important;
+}
+
+.fz-2-2 {
+    font-size: 2.2rem !important;
+}
+
 /* box-chung */
 .box__popular {
     display: inline-flex;
@@ -192,8 +202,9 @@ img {
     font-weight: 600;
 }
 
+.description__global-link:hover,
 .box__popular:hover .box__popular-text {
-    color:#2568ef;
+    color:var(--blue-color);
     transition: all 0.3s;
 }
 
@@ -239,6 +250,12 @@ img {
     font-weight: 600;
 }
 
+.btn:hover {
+    background-color: #48494b;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
 /* 
  <button class="btn bc-blue">Subscribe</button>
 */
@@ -263,7 +280,7 @@ img {
     height: var(--kichthuoc);
     z-index: 10;
     border-radius: 50%;
-    background-color: #fff;
+    /* background-color: #fff; */
     border: 2px solid #fff;
     text-decoration: none;
 }
@@ -288,7 +305,7 @@ img {
 
 /* 
 
-<div class="circle">
+<div class="circle bc-while">
     <i class=" circle-icon far fa-image"></i>
 </div>
 
@@ -492,7 +509,8 @@ img {
     line-height: 1.4;
 }
 
-/* 
+/*
+
 <div class="description__global">
             <div class="description__global-heading">
               <a href="" class="box__popular box__margin-samll">
